@@ -320,7 +320,7 @@
     </build>
     <repositories>
     <repository>
-      <id>${CENTRAL_REPO}</id>
+      <id>${NEXUS-GRP-REPO}</id>
       <url>http://${NEXUSIP}:${NEXUSPORT}/repository/${NEXUS-GRP-REPO}/</url>
     </repository>
   </repositories>
