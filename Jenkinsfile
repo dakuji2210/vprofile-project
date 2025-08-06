@@ -30,19 +30,18 @@ pipeline {
                 
             }
         }
-        stage ('test') {
+        stage('Test'){
             steps {
-                script {
-                    sh 'mvn -s settings.xml test'
-                    }
+                sh 'mvn -s settings.xml test'
+            }
+
+        }
+
+        stage('Checkstyle Analysis'){
+            steps {
+                sh 'mvn -s settings.xml checkstyle:checkstyle'
             }
         }
-        stage ('Checkstyle Analysis') {
-            steps {
-                script {
-                    sh 'mvn -s settings.xml checkstyle:checkstyle'
-                }
-            }
         }
     }
 }
