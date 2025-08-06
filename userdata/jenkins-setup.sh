@@ -1,6 +1,6 @@
 #!/bin/bash
 sudo apt update
- 
+ ###### test push #######
 sudo apt install openjdk-17-jdk -y
  
 sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
