@@ -24,7 +24,6 @@ pipeline {
             }
             post {
                 success {
-                    echo 'Build completed successfully.'
                     echo 'Archiving artifacts...'
                     archiveArtifacts artifacts: '**/*.war'
                 }
@@ -34,7 +33,8 @@ pipeline {
         stage ('test') {
             steps {
                 script {
-                    sh 'mvn -s settings.xml test'                }
+                    sh 'mvn -s settings.xml test'
+                    }
             }
         }
         stage ('Checkstyle Analysis') {
